@@ -393,8 +393,8 @@ class Endpoint(metaclass=ABCMeta):
             for variable in result.vars:
                 column[str(variable)].append(self.to_python(bindings.get(variable)))
 
-        for key in column:
-            column[key] = self._normalize_column_type(column[key])
+        #for key in column:
+        #    column[key] = self._normalize_column_type(column[key])
 
         return pd.DataFrame(column)
 
